@@ -1,0 +1,47 @@
+        Question 1
+        
+        String firstObj = "Some Value";
+        String secondObj = new String("Another Value");
+        
+       // Question 2
+        
+        Output:,blu
+        
+        Question 3
+        
+        The output of the code is total of one number between 0 and 41 add with 10.
+        
+        Question 4
+        
+        import java.util.Random;
+        public class Exercise3 {
+            public static void main(String[] args) {
+                Random num = new Random();
+                int num1 = num.nextInt(100);
+                int num2 = num.nextInt(100);
+                int largestNum = Math.max(num1,num2);
+                System.out.println("Number 1 : "+num1);
+                System.out.println("Number 2 : "+num2);
+                System.out.println("Largest number : "+ largestNum);
+                }
+        }
+        
+        //Question 5
+        
+        Question 6
+        
+        import java.util.*;
+        public class Exercise3 {
+            public static void main(String[] args) {
+                Scanner in = new Scanner(System.in);
+                System.out.print("Enter first number: ");
+                int x = in.nextInt();
+                System.out.print("Enter second number: ");
+                int y = in.nextInt();
+                System.out.println("Value of first number multiply with second number is " + Math.multiplyExact(x,y));
+            }
+        }
+        
+        Question 7
+
+      
