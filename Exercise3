@@ -1,11 +1,9 @@
         Question 1
         
+        i)By string literal
         String firstObj = "Some Value";
+        ii)By new keyword
         String secondObj = new String("Another Value");
-        
-       // Question 2
-        
-        Output:,blu
         
         Question 3
         
@@ -26,8 +24,6 @@
                 }
         }
         
-        //Question 5
-        
         Question 6
         
         import java.util.*;
@@ -44,4 +40,15 @@
         
         Question 7
 
+        public class Exercise3 {
+            public static void main(String[] args) {
+                String text1 = "School of Computing";
+                String text2 = "College of Arts and Sciences";
+                String text3 = "UUM Sintok";
+        
+                System.out.println("Total length of text1 , text2 and text3 is " + (text1.length()+text2.length()+text3.length()));
+        
+                System.out.println(text2.substring(0,20) + text1.substring(10,19));
+    }
+}
       
