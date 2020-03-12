@@ -1,9 +1,13 @@
 Question 1
 package test;
+import java.util.*;
 public class Test {
-    public static void main(String[] args) {
-        System.out.println("Programming");
-    }   
+   public static void main(String[] args) {
+       Scanner in = new Scanner(System.in);
+       System.out.print("Enter Message: ");
+       String msg = in.next();
+       System.out.println("You enter "+ msg);
+   }
 }
 
 Question 2
