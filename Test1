@@ -1,0 +1,47 @@
+Question 1
+package test;
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Programming");
+    }   
+}
+
+Question 2
+package test;
+public class Test {
+    static int integer;
+    static double decimal;
+    static String word;
+    static boolean result;
+    static float num;
+    static long numeric;
+
+   public static void main(String[] args) {
+      System.out.println("Int = " + integer);
+      System.out.println("Double = " + decimal);
+      System.out.println("String = " + word);
+      System.out.println("Boolean = " + result);
+      System.out.println("Float = " + num);
+      System.out.println("Long = " + numeric);
+   }
+}
+
+Question 3
+package test;
+import java.util.*;
+public class Test {
+   public static void main(String[] args) {
+       Scanner in = new Scanner(System.in);
+       System.out.print("Enter First String: ");
+       String sen1 = in.next();
+       System.out.print("Enter Second String: ");
+       String sen2 = in.next();
+       
+       if(sen1.equals(sen2)){
+           System.out.println("First String is equal to Second String");
+       }
+       else{
+           System.out.println("First String is not equal to Second String");
+       }
+   }
+}
