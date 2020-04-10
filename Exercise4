@@ -1,4 +1,7 @@
 Question1
+
+ANSWER: Output is 3
+
 class QuestionOne {
 	private int count;
 	
@@ -46,9 +49,135 @@ class TestStaff {
         System.out.println("---------------------------------");
         System.out.println("Staff Name\t:" + staff.getName());
         System.out.println("Staff ID\t:" + staff.getStaffID());
-        System.out.println("Salary of Staff\t:" + staff.getSalary());
+        System.out.printf("Salary of Staff\t:%.2f" , staff.getSalary());
     }
 }
 
+
 Question3
+
+import java.util.*;
+public class TestMyFCStaff {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter Staff Name\t\t:");
+        String name = in.nextLine();
+        System.out.print("Enter Staff ID\t\t\t:");
+        String staffID = in.nextLine();
+        System.out.print("Enter Total Hours Work\t\t:");
+        int hour = in.nextInt();
+        System.out.print("Enter Total Sales\t\t:RM");
+        double sales = in.nextDouble();
+        
+        MyFCStaff staff = new MyFCStaff();
+        System.out.println("--------------------------------------------------");
+        staff.MyFCStaff(name, staffID, hour, sales);
+        staff.calculateCommission();
+        staff.calculateSalary();
+        staff.displaySalary();
+    }   
+    
+}
+
+//class MyFCStaff
+
+class MyFCStaff {
+         private int hour;
+         private double sales,salary,commission;
+         private String name, id, display;
+         
+     public void MyFCStaff(String staffName, String staffID, int wHours, double totalSales){
+         this.name = staffName;
+         this.id = staffID;
+         this.hour = wHours;
+         this.sales = totalSales;
+     } 
+    
+     public void calculateCommission(){
+         if(150 <= sales && sales <= 300){
+            commission = 0.05;
+         }
+         else if(301.00 <= sales && sales <= 500.00){
+                 commission = 0.10;
+         }
+         else if(sales >= 500.00){
+                 commission = 0.15;
+         }
+     }
+     public void calculateSalary(){
+         salary = (commission*sales) + (hour*8);
+     }
+     public void displaySalary(){
+         System.out.println("Staff Name\t\t\t:"+ this.name);
+         System.out.println("Staff ID\t\t\t:"+ this.id);
+         System.out.println("Hours Work\t\t\t:" + this.hour);
+         System.out.printf("Total Sale\t\t\t:RM%.2f\n",this.sales);
+         System.out.printf("Total Salary\t\t\t:RM%.2f\n",this.salary);
+     }
+}
+
+Question4
+
+import java.util.*;
+public class TestMyFCStaff {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter Staff Name\t\t:");
+        String name = in.nextLine();
+        System.out.print("Enter Staff ID\t\t\t:");
+        String staffID = in.nextLine();
+        System.out.print("Enter Total Hours Work\t\t:");
+        int hour = in.nextInt();
+        System.out.print("Enter Total Sales\t\t:RM");
+        double sales = in.nextDouble();
+        
+        MyFCStaff staff = new MyFCStaff();
+        System.out.println("------------------------------------------------------------");
+        staff.MyFCStaff(name, staffID, hour, sales);
+        staff.calculateCommission();
+        staff.calculateSalary();
+        System.out.println(staff.toString());
+    }
+}
+class MyFCStaff {
+         private int hour;
+         private double sales,salary,commission;
+         private String name, id, display;
+         
+     public void MyFCStaff(String staffName, String staffID, int wHours, double totalSales){
+         this.name = staffName;
+         this.id = staffID;
+         this.hour = wHours;
+         this.sales = totalSales;
+     } 
+    
+     public void calculateCommission(){
+         if(150 <= sales && sales <= 300){
+            commission = 0.05;
+         }
+         else if(301.00 <= sales && sales <= 500.00){
+                 commission = 0.10;
+         }
+         else if(sales >= 500.00){
+                 commission = 0.15;
+         }
+     }
+     public void calculateSalary(){
+         salary = (commission*sales) + (hour*8);
+     }
+     public String toString(){
+         String sName, sID, wHour, tSales, tSalary;
+         sName = String.format("Staff Name\t\t\t:" + name + "\n");
+         sID = String.format("Staff ID\t\t\t:"+ id + "\n");
+         wHour = String.format("Hours Work\t\t\t:" + hour + "\n");
+         tSales = String.format("Total Sales\t\t\t:RM%.2f" , sales);
+         tSalary = String.format("\nTotal Salary\t\t\t:RM%.2f" , salary);
+         return sName + sID + wHour + tSales + tSalary;
+     }
+}
+
+
+
+
+
 
