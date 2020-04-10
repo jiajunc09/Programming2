@@ -1,0 +1,54 @@
+Question1
+class QuestionOne {
+	private int count;
+	
+	public void QuestionOne(){
+		count = 1;
+	}
+	public void increment() {
+		count = count + 1;
+	}
+	public int getCount() {
+		return count;
+	}
+}
+public class Q1Main {
+	public static void main (String []arg) {
+		QuestionOne q1;
+		q1 = new QuestionOne();
+		q1.QuestionOne();
+		q1.increment();
+		q1.increment();
+		System.out.println(q1.getCount());
+	}
+}
+
+
+Question 2b)
+import java.util.Scanner;
+class TestStaff {
+    static Scanner console = new Scanner(System.in);
+    public static void main(String[] args) {
+        Staff staff = new Staff();
+        
+        System.out.print("Enter Staff Name\t:");
+        String name = console.nextLine();
+        System.out.print("Enter Staff ID\t\t:");
+        String staffID = console.nextLine();
+        System.out.print("Enter Working Perday\t:");
+        int workingperday = console.nextInt();
+        
+        staff.setStaffInfo(name,staffID,workingperday);
+        staff.calculateSalary();
+        
+        System.out.println("---------------------------------");
+        System.out.println("\t    Staff Info    \t");
+        System.out.println("---------------------------------");
+        System.out.println("Staff Name\t:" + staff.getName());
+        System.out.println("Staff ID\t:" + staff.getStaffID());
+        System.out.println("Salary of Staff\t:" + staff.getSalary());
+    }
+}
+
+Question3
+
