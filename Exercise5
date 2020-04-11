@@ -1,0 +1,42 @@
+Task 1
+
+Q1
+Answer: Triangle.java
+
+Q2
+Answer: No error after compile this file
+
+Q3
+Answer: No output after run the file. This is because the file has no main methods. 
+
+
+Task 2
+
+Q1
+
+
+Q3
+a) object
+   Answer: tri
+
+b) user-defined methods with return value
+   Answer: getHeight()
+           getBase()
+           getArea()
+
+c) user-defined methods with passing-parameters 
+   Answer: setHeight(double len)
+           setBase(double b)
+           set(double len,double b)
+
+d) accessor methods
+   Answer: getHeight()
+           getBase()
+           getArea()
+
+e) mutator methods
+   Answer: setHeight(double len)
+           setBase(double b)
+           set(double len, double b)
+
+Task 3
