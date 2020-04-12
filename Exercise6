@@ -86,6 +86,86 @@ public class MaxcomApp {
 
 TASK 3
 
+import java.util.*;
+public class Average {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int int1, int2, int3,int4;
+        
+        System.out.print("Enter Integer 1\t\t: ");
+        int1 = in.nextInt();
+        System.out.print("Enter Integer 2\t\t: ");
+        int2 = in.nextInt();
+        System.out.print("Enter Integer 3\t\t: ");
+        int3 = in.nextInt();
+        System.out.println("Average for 3 integers\t: " + average(int1,int2,int3));
+        System.out.print("Enter Integer 4\t\t: ");
+        int4 = in.nextInt();
+        System.out.println("Average for 4 integers\t: " + average(int1,int2,int3,int4));
+        
+    }
+    public static double average(int int1, int int2, int int3){
+        double average = (double)(int1 + int2 + int3)/3;
+        return average;
+    }
+    public static double average(int int1, int int2, int int3, int int4){
+        double average = (double)(int1 + int2 + int3 + int4)/4;
+        return average;
+    }
+}
 
 
 TASK 4
+
+import java.util.*;
+public class TestBook {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int n;
+        String title, mostExpensiveBook = null;
+        double price, highestPrice=0;
+        
+        System.out.print("Enter Number of Book: ");
+        n = in.nextInt();
+        System.out.println("");
+        
+        Book myLibrary[] = new Book[n];
+        
+        for(int i=0; i<myLibrary.length; i++){
+            System.out.print("Enter Title of Book: ");
+            title = in.next();
+            System.out.print("Enter Price of Book: RM");
+            price = in.nextDouble();
+            
+            myLibrary[i] = new Book(title,price);
+            if(myLibrary[i].getPrice()>highestPrice){
+               highestPrice = myLibrary[i].getPrice();
+               mostExpensiveBook = myLibrary[i].getTitle();
+            }
+        
+    }
+    System.out.println("\nTitle of book with the highest price\t\t   : " + mostExpensiveBook);
+    System.out.printf("Price\t\t\t\t\t\t   : RM%.2f\n\n", highestPrice);
+    for(int i=0; i<n; i++){
+        if(myLibrary[i].getTitle().indexOf("Java")!=-1){
+           System.out.println("The title of book that contain term \"Java\" in title: " + myLibrary[i].getTitle());
+        }
+    }
+  }
+}
+class Book {
+ private String title;      //book’s title
+ private double price;      //book’s price
+
+ public Book(String t, double p) {
+   title = t;
+   price = p;
+ }
+ public String getTitle() {
+   return title;
+ }
+
+ public double getPrice() {
+   return price;
+ }
+}
